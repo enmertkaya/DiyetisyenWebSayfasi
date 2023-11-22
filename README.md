@@ -9,12 +9,12 @@ Bu projede diyetisyen web sayfası , admin panel tarafından kontrol edilebilir 
 ### 1-Admin/Yönetici Rolü 
 
 * :ear: ​**Kullanıcı İşlemleri :** Yönetici **Admin Paneli** aracılığı ile  sayfadaki bilgiler eklenebilir, silinebilir ve güncellenebilir.
-  ![](images/admingiris.png)
+  ![](image/admingiris.png)
 
   ***Admin Paneline Ait Sayfalar***
-  ![](images/SliderEkrani.png)
-  ![](images/Hizmetler.png)
-  ![](images/Hakkimizda.png)
+  ![](image/SliderEkrani.png)
+  ![](image/Hizmetler.png)
+  ![](image/Hakkimizda.png)
 
     ## :computer: Projenin Kurulumu
 
