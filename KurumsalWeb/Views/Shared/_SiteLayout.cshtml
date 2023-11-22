@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Dyt. Burçin Yücel</title>
+    <meta content="Ankara,Diyetisyen,Ankara En İyi Diyetisyen,Diyetisten Burcin Yucel,Diyetisyen Burçin Yücel" name="description">
+    <meta content="Ankara,Diyetisyen,Ankara En İyi Diyetisyen,Diyetisten Burcin Yucel,Diyetisyen Burçin Yücel" name="keywords">
+
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <meta charset="utf-8">
+    @*<meta content="width=device-width, initial-scale=1.0" name="viewport">*@
+
+    @*<title>Delicious Bootstrap Template - Index</title>*@
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="/Content/SiteLayout/assets/img/favicon.png" rel="icon">
+    <link href="/Content/SiteLayout/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/Content/SiteLayout/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/Content/SiteLayout/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Content/SiteLayout/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/Content/SiteLayout/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/Content/SiteLayout/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/Content/SiteLayout/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/Content/SiteLayout/assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Delicious
+    * Updated: Mar 10 2023 with Bootstrap v5.2.3
+    * Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+<body>
+
+    <!-- ======= Top Bar ======= -->
+    <section id="topbar" class="d-flex align-items-center fixed-top topbar-scrolled">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-center justify-content-lg-start">
+            <i class="bi bi-mailbox d-flex align-items-center"><span>dytburcinyucel@gmail.com</span></i>
+            <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"><span>Pazartesi-Cumartesi: 09:00 - 20:00 </span></i>
+        </div>
+    </section>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+            <div class="logo me-auto">
+                <h1><a href="/AnaSayfa">Beslenme ve Diyet Danışmanlığı</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                 @*<a href="index.html"><img src="/Conten/SiteLayout/assets/img/logo.png" alt="" class="img-fluid"></a>*@
+            </div>
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Ana Sayfa</a></li>
+                    <li><a class="nav-link scrollto" href="#about">Hakkımda</a></li>
+                    @*<li><a class="nav-link scrollto" href="#menu">Diyet Paketleri</a></li>*@
+                    <li><a class="nav-link scrollto" href="#events">Diyet Paketleri</a></li>
+                    <li><a class="nav-link scrollto" href="#specials">Tarifler</a></li>
+                    <li><a class="nav-link scrollto" href="#gallery">Memnuniyet</a></li>
+                    <li><a class="nav-link scrollto" href="#chefs">Değişimler</a></li>
+
+                    @*<li class="dropdown">
+            <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                <li><a href="#">Drop Down 1</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                        <li><a href="#">Deep Drop Down 1</a></li>
+                        <li><a href="#">Deep Drop Down 2</a></li>
+                        <li><a href="#">Deep Drop Down 3</a></li>
+                        <li><a href="#">Deep Drop Down 4</a></li>
+                        <li><a href="#">Deep Drop Down 5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Drop Down 2</a></li>
+                <li><a href="#">Drop Down 3</a></li>
+                <li><a href="#">Drop Down 4</a></li>
+            </ul>
+        </li>*@
+                    @*<li><a class="nav-link scrollto" href="#contact">İletişim</a></li>*@
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+            <a href="#book-a-table" class="book-a-table-btn scrollto">Bize Ulaşın</a>
+
+        </div>
+    </header><!-- End Header -->
+   @RenderBody()
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <h3>Uzman Diyetisyen Burçin Yücel</h3>
+            <p>SOSYAL MEDYA HESAPLARIM.</p>
+            <div class="social-links">
+                <a href="https://twitter.com/bbuubi" class="twitter"><i class="bx bxl-twitter"></i></a>
+                @*<a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>*@
+                <a href="https://www.instagram.com/dytburcinyucel/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                @*<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>*@
+                <a href="https://www.linkedin.com/in/bur%C3%A7in-yucel-68b900127/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <div class="copyright">
+                @*&copy; Copyright <strong><span>Delicious</span></strong>. All Rights Reserved*@
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/ -->
+                Designed by <a href="https://www.instagram.com/enmertkaya/">Enes Mert Kaya</a>
+                <div class="copyright">
+                    &copy; Copyright <strong><span>dytburcinyucel.com</span></strong>. Tüm hakları saklıdır.
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/Content/SiteLayout/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/Content/SiteLayout/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/Content/SiteLayout/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/Content/SiteLayout/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/Content/SiteLayout/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/Content/SiteLayout/assets/js/main.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<KurumsalWeb.Models.Model.Iletisim>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Iletisim Sayfası</h2>
+
+<p>
+    @Html.ActionLink("Yeni Oluştur", "Create")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Adres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Faks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WhatsApp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Twitter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Instagram)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Faks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WhatsApp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Twitter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Instagram)
+        </td>
+        <td>
+            @Html.ActionLink("Güncelle", "Edit", new { id=item.IletisimId }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.IletisimId }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.IletisimId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,8 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background: url(/Content/AdminLayout/assets/img/baskentBack.jpeg);
+    background-position:center;
+    font-family:sans-serif;
+}

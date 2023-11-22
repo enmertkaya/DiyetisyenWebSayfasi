@@ -1,0 +1,47 @@
+﻿@model IEnumerable<KurumsalWeb.Models.Model.Hakkimizda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<p>
+    @Html.ActionLink("Yeni Açıklama Ekle", "Create")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </th>
+        <th>Baslik</th>
+        <th>Satir 1 Acıklama</th>
+        <th>Satir 2 Acıklama</th>
+        <th>Satir 3 Acıklama</th>
+        <th>Sonuç</th>
+        <th>Link</th>
+        <th>Resim URL</th>
+        <th>İşlemler</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.HakkimizdaId</td>
+    <td>
+        @Html.Raw(item.Aciklama)
+    </td>
+    <td>@item.Baslik</td>
+    <td>@item.Satir1Aciklama</td>
+    <td>@item.Satir2Aciklama</td>
+    <td>@item.Satir3Aciklama</td>
+    <td>@item.SonAciklama</td>
+    <td>@item.Link</td>
+    <td><img width="100" height="100" src="@item.ResimURL" /> </td>
+    <td><a href="/Hizmet/Edit/@item.HakkimizdaId">Düzenle</a> | <a href="/Hakkimizda/Delete/@item.HakkimizdaId">Sil</a></td>
+</tr>
+    }
+
+</table>

@@ -1,0 +1,834 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+    ViewBag.Title = "Ana Sayfa";
+ }
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div class="hero-container">
+        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+          @{ 
+              Html.RenderAction("SliderPartial", "Home");
+          }
+                
+
+            
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+            </a>
+
+        </div>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container-fluid">
+
+            <div class="row">
+                @foreach (var item in ViewBag.Hakkimizda)
+                {
+    <div class="col-lg-5 align-items-stretch video-box" style='background-image: url(/Content/SiteLayout/assets/img/hakgg.jpg'>
+        @*<a href="https://www.instagram.com/dytburcinyucel/" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>*@
+    </div>
+
+                    <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+
+                        <div class="content">
+                            <h3>@item.Baslik</h3>
+                            <p>
+                                @Html.Raw(item.Aciklama)
+                            </p>
+                            <p class="fst-italic">
+                                @*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna aliqua.*@
+                            </p>
+                            <ul>
+                                <li><i class="bx bx-check-double"></i> @item.Satir1Aciklama</li>
+                                <li><i class="bx bx-check-double"></i> @item.Satir2Aciklama</li>
+                                <li><i class="bx bx-check-double"></i> @item.Satir3Aciklama</li>
+                            </ul>
+                            <p>
+                                @item.SonAciklama
+                            </p>
+                        </div>
+
+                    </div>}
+
+
+
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+    <!-- ======= Whu Us Section ======= -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Burçin Yücel <span>Kimdir ?</span></h2>
+                @*<p>Başkent Ünivesitesi Beslenme ve Diyetetik bölümünden mezun oldum.Yüksek lisansımı sporcu beslenmesi üzerine tamamladım.Mesleğimin 9.yılına girmiş bulunmaktayım.Şu anda yüzyüze ve online olarak sağlıklı beslenmeyi danışanlarıma ulaştırmaya devam ediyorum. </p>*@
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4">
+                    <div class="box">
+                        <span>01</span>
+                        <h4>Tanışalım</h4>
+                        <p>
+                            Başkent Ünivesitesi Beslenme ve Diyetetik bölümünden mezun oldum.Yüksek lisansımı sporcu beslenmesi üzerine tamamladım.
+                            Mesleğimin 9.yılına girmiş bulunmaktayım.
+                        <p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div class="box">
+                        <span>02</span>
+                        <h4>Nerelerde Çalıştım</h4>
+                        <p>2015-2019 yılları arasında Sports International'da sporcu diyetisyeni olarak görev yaptım.Daha sonra 360fit ve WinFit Life zayıflama merkezlerinde uzman diyetisyen olarak danışanlarımın kilo takibi üzerine çalıştım ve ihtiyaçlarına yönelik beslenme programları planladım.</p>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div class="box">
+                        <span>03</span>
+                        <h4> Verdiğim Hizmetler</h4>
+                        <p>Kilo Alma - Kilo Verme , Sağlıklı beslenme danışmanlığı , Gebelik ve Emziklilik döneminde Beslenme , Sporcu Beslenmesi , Çocuk ve Ergen Beslenmesi , Hastalıklarda Beslenme Tedavisi ve Yeme Bozukluklarında Beslenme Tedavisi.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Whu Us Section -->
+    <!-- ======= Menu Section ======= -->
+    <!--<section id="menu" class="menu">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Diyet <span>Paketleri</span></h2>
+            </div>-->
+    @*<div class="row">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="menu-flters">
+                    <li data-filter="*" class="filter-active">Bütün Paketler</li>
+                    <li data-filter=".filter-starters">Kilo Verme</li>
+                    <li data-filter=".filter-salads">Kilo Alma</li>
+                    <li data-filter=".filter-specialty">Kilo Kontrol</li>
+                </ul>
+            </div>
+        </div>*@
+
+    <!--<div class="row menu-container">
+
+                @foreach (var item in ViewBag.Kimlik)
+                {
+    <div class="col-lg-6 menu-item filter-starters">
+        <div class="menu-content">
+            <a href="#">@item.Title</a><span> @item.Unvan </span>
+        </div>
+        <div class="menu-ingredients">
+            @Html.Raw(item.Description)
+        </div>
+    </div>}-->
+    @*<div class="col-lg-6 menu-item filter-starters">
+            <div class="menu-content">
+                <a href="#">Lobster Bisque</a><span>$5.95</span>
+            </div>
+            <div class="menu-ingredients">
+                Lorem, deren, trataro, filede, nerada
+            </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-specialty">
+            <div class="menu-content">
+                <a href="#">Bread barrel</a><span>$6.95</span>
+            </div>
+            <div class="menu-ingredients">
+                Lorem, deren, trataro, filede, nerada
+            </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-starters">
+            <div class="menu-content">
+                <a href="#">Crab Cake</a><span>$7.95</span>
+            </div>
+            <div class="menu-ingredients">
+                A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+            </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-salads">
+            <div class="menu-content">
+                <a href="#">Caesar Selections</a><span>$8.95</span>
+            </div>
+            <div class="menu-ingredients">
+                Lorem, deren, trataro, filede, nerada
+            </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-specialty">
+            <div class="menu-content">
+                <a href="#">Tuscan Grilled</a><span>$9.95</span>
+            </div>
+            <div class="menu-ingredients">
+                Grilled chicken with provolone, artichoke hearts, and roasted red pesto
+            </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-starters">
+            <div class="menu-content">
+                <a href="#">Mozzarella Stick</a><span>$4.95</span>
+            </div>
+            <div class="menu-ingredients">
+                Lorem, deren, trataro, filede, nerada
+            </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-salads">
+            <div class="menu-content">
+                <a href="#">Greek Salad</a><span>$9.95</span>
+            </div>
+            <div class="menu-ingredients">
+                Fresh spinach, crisp romaine, tomatoes, and Greek olives
+            </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-salads">
+            <div class="menu-content">
+                <a href="#">Spinach Salad</a><span>$9.95</span>
+            </div>
+            <div class="menu-ingredients">
+                Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+            </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-specialty">
+            <div class="menu-content">
+                <a href="#">Lobster Roll</a><span>$12.95</span>
+            </div>
+            <div class="menu-ingredients">
+                Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
+            </div>
+        </div>*@
+
+    <!--</div>
+
+        </div>
+    </section>-->
+    <!-- End Menu Section -->
+    <section id="events" class="events">
+        <div class="container">
+
+            <div class="section-title">
+                <h2><span>Beslenme Danışmanlığı</span></h2>
+            </div>
+
+            <div class="events-slider swiper">
+                <div class="swiper-wrapper">
+                    @foreach (var item in ViewBag.Hizmetler)
+                    {
+        <div class="swiper-slide">
+            <div class="row event-item">
+                <div class="col-lg-6">
+                    <img src="@item.ResimURL" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                    <h3>@item.Baslik</h3>
+                    <div class="price">
+                        @*<p><span>$189</span></p>*@
+                    </div>
+                    <p class="fst-italic">
+                        @Html.Raw(item.Aciklama)
+                    </p>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> @item.Satir1Aciklama</li>
+                        <li><i class="bi bi-check-circle"></i> @item.Satir2Aciklama</li>
+                        <li><i class="bi bi-check-circle"></i> @item.Satir3Aciklama</li>
+                        <li><i class="bi bi-check-circle"></i> @item.Satir4Aciklama</li>
+                        <li><i class="bi bi-check-circle"></i> @item.Satir5Aciklama</li>
+                    </ul>
+                    <p>@Html.Raw(item.SonAciklama)</p>
+                </div>
+            </div>
+        </div><!-- End testimonial item -->}
+
+                    <!--<div class="swiper-slide">
+                        <div class="row event-item">
+                            <div class="col-lg-6">
+                                <img src="/Content/SiteLayout/assets/img/event-private.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-lg-6 pt-4 pt-lg-0 content">
+                                <h3>Private Parties</h3>
+                                <div class="price">
+                                    <p><span>$290</span></p>
+                                </div>
+                                <p class="fst-italic">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna aliqua.
+                                </p>
+                                <ul>
+                                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                                    <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                                </ul>
+                                <p>
+                                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur
+                                </p>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!-- End testimonial item -->
+                    <!--<div class="swiper-slide">
+                        <div class="row event-item">
+                            <div class="col-lg-6">
+                                <img src="/Content/SiteLayout/assets/img/event-custom.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-lg-6 pt-4 pt-lg-0 content">
+                                <h3>Custom Parties</h3>
+                                <div class="price">
+                                    <p><span>$99</span></p>
+                                </div>
+                                <p class="fst-italic">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna aliqua.
+                                </p>
+                                <ul>
+                                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                                    <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                                    <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                                </ul>
+                                <p>
+                                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur
+                                </p>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!-- End testimonial item -->
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <!-- ======= Specials Section ======= -->
+    <section id="specials" class="specials">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Bana Özel <span>Pratik Tarifler</span></h2>
+                
+                  
+                
+                
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="nav nav-tabs flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Pancarlı Salata</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Yeşil Smoothie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Çilekli Yaz Salatası</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Proteinli Smoothie</a>
+                        </li>
+                        @*<li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Tarif5</a>
+                        </li>*@
+                    </ul>
+                </div>
+                <div class="col-lg-9 mt-4 mt-lg-0">
+                    <div class="tab-content">
+                        <div class="tab-pane active show" id="tab-1">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Pancarlı Salata</h3>
+                                    <p class="fst-italic">Malzemeler : 1 orta boy haşlanmış pancar , 60 gram az yağlı peynir , İstediğiniz Yeşillikler , 1 tatlı kaşığı zeytinyağı , Yarım limon suyu </p>
+                                    <p>Pancarı, peyniri ve yeşillikleri doğrayıp bütün malzemeleri karıştıralım.Afiyet olsun.</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="~/Content/SiteLayout/assets/img/ssa.jpg" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab-2">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Yeşil Smoothie</h3>
+                                    <p class="fst-italic">Malzemeler : 400 ml su , 1 Adet elma , 1 İnce dilim ananas , 15 dal maydonoz , 1 dilim taze zencefil , Yarım kabuksuz limon , 1 adet salatalık</p>
+                                    <p>Hazırlamış olduğumuz bütün malzemeleri blendırdan geçirip servise sunabilirsiniz.Afiyet olsun.</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="~/Content/SiteLayout/assets/img/image_6483441 (2).jpg" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab-3">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Çilekli Yaz Salatası</h3>
+                                    <p class="fst-italic">Malzemeler : 4-5 adet çilek.2 avuç semizotu.60 gram az yağlı peynir.5 yarım ceviz.1 tatlı kaşığı zeytinyağı.Yarım limon suyu.</p>
+                                    <p>Bütün malzemeleri doğrayıp,karıştırıp servise sunabilirsiniz.Afiyet olsun.</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="~/Content/SiteLayout/assets/img/ssd.jpg" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab-4">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Proteinli Smoothie</h3>
+                                    <p class="fst-italic">Malzemeler: 250 ml proteinli süt.1 orta boy muz.1 tatlı kaşığı şekersiz fıstık ezmesi.1 tatlı kaşığı kakao.5-6 adet badem.</p>
+                                    <p>Hazırlamış olduğumuz bütün malzemeleri blendırdan geçirip servise sunabilirsiniz.Afiyet olsun.</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="~/Content/SiteLayout/assets/img/ssdd.jpg" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        @*<div class="tab-pane" id="tab-5">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
+                                    <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
+                                    <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="~/Content/SiteLayout/assets/img/scc.jpg" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Specials Section -->
+    <!-- ======= Events Section ======= -->
+    <!-- End Events Section -->
+    <!-- ======= Book A Table Section ======= -->
+    @*<section id="book-a-table" class="book-a-table">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Book a <span>Table</span></h2>
+                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+                </div>
+
+                <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                            <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 form-group mt-3">
+                            <input type="text" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 form-group mt-3">
+                            <input type="text" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 form-group mt-3">
+                            <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+                    </div>
+                    <div class="text-center"><button type="submit">Send Message</button></div>
+                </form>
+
+            </div>
+        </section>*@<!-- End Book A Table Section -->
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+        <div class="container-fluid">
+
+            <div class="section-title">
+                <h2>Danışanlara Ait <span>Memnuniyet Mesajları</span></h2>
+                
+            </div>
+
+            <div class="row g-0">
+                @foreach (var item in ViewBag.Kimlik)
+                {
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="@item.LogoURL" class="gallery-lightbox">
+                                <img src="@item.LogoURL" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                }
+
+
+                @*<div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+                <a href="/Content/SiteLayout/assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
+                    <img src="/Content/SiteLayout/assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+                <a href="/Content/SiteLayout/assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
+                    <img src="/Content/SiteLayout/assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+                <a href="/Content/SiteLayout/assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
+                    <img src="/Content/SiteLayout/assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+                <a href="/Content/SiteLayout/assets/img/gallery/gallery-5.jpg" class="gallery-lightbox">
+                    <img src="/Content/SiteLayout/assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+                <a href="/Content/SiteLayout/assets/img/gallery/gallery-6.jpg" class="gallery-lightbox">
+                    <img src="/Content/SiteLayout/assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+                <a href="/Content/SiteLayout/assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
+                    <img src="/Content/SiteLayout/assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+                <a href="/Content/SiteLayout/assets/img/gallery/gallery-8.jpg" class="gallery-lightbox">
+                    <img src="/Content/SiteLayout/assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+                </a>
+            </div>
+        </div>*@
+
+            </div>
+
+        </div>
+    </section><!-- End Gallery Section -->
+    <!-- ======= Chefs Section ======= -->
+    <section id="chefs" class="chefs">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Danışanların <span>Değişimleri</span></h2>
+                @*<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>*@
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="/Content/SiteLayout/assets/img/chefs/ba.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Ceren Hanım</h4>
+                            <span>3 aylık yüz yüze diyet sonucu -13 kg</span>
+                            <div class="social">
+                    
+                        <a href="https://www.instagram.com/dytburcinyucel/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/bur%C3%A7in-yucel-68b900127/"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                        </div>
+                    </div>
+                </div>    <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="/Content/SiteLayout/assets/img/chefs/ba2.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Murat Bey</h4>
+                            <span>4 aylık online diyet sonucu -20 kg</span>
+                            <div class="social">
+                        
+                        <a href="https://www.instagram.com/dytburcinyucel/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/bur%C3%A7in-yucel-68b900127/"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                        </div>
+                    </div>
+                </div>    <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="/Content/SiteLayout/assets/img/chefs/ba3.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Ezgi Hanım</h4>
+                            <span>6 aylık yüz yüze diyet sonucu -20kg</span>
+                            <div class="social">
+                      
+                        <a href="https://www.instagram.com/dytburcinyucel/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/bur%C3%A7in-yucel-68b900127/"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="/Content/SiteLayout/assets/img/chefs/ba4.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Metin Bey</h4>
+                            <span>6 aylık yüz yüze diyet sonucu -41kg</span>
+                            <div class="social">
+                               
+                                <a href="https://www.instagram.com/dytburcinyucel/"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/bur%C3%A7in-yucel-68b900127/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="/Content/SiteLayout/assets/img/chefs/ba5.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Metin Bey </h4>
+                            <span>6 aylık yüz yüze diyet sonucu -41kg</span>
+                            <div class="social">
+
+                                <a href="https://www.instagram.com/dytburcinyucel/"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/bur%C3%A7in-yucel-68b900127/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="/Content/SiteLayout/assets/img/chefs/ba6.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Sabır Hanım</h4>
+                            <span>5 aylık online diyet sonucu -25kg</span>
+                            <div class="social">
+                                <a href="https://www.instagram.com/dytburcinyucel/"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/bur%C3%A7in-yucel-68b900127/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="/Content/SiteLayout/assets/img/chefs/ba7.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Şükrü Bey</h4>
+                            <span>1 aylık yüz yüze diyet sonucu -6.5kg</span>
+                            <div class="social">
+                                <a href="https://www.instagram.com/dytburcinyucel/"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/bur%C3%A7in-yucel-68b900127/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="/Content/SiteLayout/assets/img/chefs/ba8.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Kaan Bey</h4>
+                            <span>9 aylık online diyet sonucu -43kg</span>
+                            <div class="social">
+                                <a href="https://www.instagram.com/dytburcinyucel/"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/bur%C3%A7in-yucel-68b900127/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="member">
+                        <div class="pic"><img src="/Content/SiteLayout/assets/img/chefs/a8.jpg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Oğulcan Bey</h4>
+                            <span>4 aylık yüz yüze diyet sonucu -20kg</span>
+                            <div class="social">
+                                <a href="https://www.instagram.com/dytburcinyucel/"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/bur%C3%A7in-yucel-68b900127/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Chefs Section -->
+    <!-- ======= Testimonials Section ======= -->
+    <!--<section id="testimonials" class="testimonials">
+        <div class="container position-relative">
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <img src="/Content/SiteLayout/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                            <h3>Saul Goodman</h3>
+                            <h4>Ceo &amp; Founder</h4>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div>-->
+    <!-- End testimonial item -->
+    <!--<div class="swiper-slide">
+        <div class="testimonial-item">
+            <img src="/Content/SiteLayout/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            <h3>Sara Wilsson</h3>
+            <h4>Designer</h4>
+            <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+        </div>
+    </div>-->
+    <!-- End testimonial item -->
+    <!--<div class="swiper-slide">
+        <div class="testimonial-item">
+            <img src="/Content/SiteLayout/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+            <h3>Jena Karlis</h3>
+            <h4>Store Owner</h4>
+            <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+        </div>
+    </div>-->
+    <!-- End testimonial item -->
+    <!--<div class="swiper-slide">
+        <div class="testimonial-item">
+            <img src="/Content/SiteLayout/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+            <h3>Matt Brandon</h3>
+            <h4>Freelancer</h4>
+            <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+        </div>
+    </div>-->
+    <!-- End testimonial item -->
+    <!--<div class="swiper-slide">
+        <div class="testimonial-item">
+            <img src="/Content/SiteLayout/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+            <h3>John Larson</h3>
+            <h4>Entrepreneur</h4>
+            <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+        </div>
+    </div>-->
+    <!-- End testimonial item -->
+    <!--</div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+    </section>-->
+    <!-- End Testimonials Section -->
+    <!-- ======= Contact Section ======= -->
+
+    <section id="book-a-table" class="book-a-table">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Bize <span>Ulaşın</span></h2>
+                <p>Formu doldurarak hangi konuda ve ne zaman iletişime geçebileceğim hakkında isteklerinizi yazabilirsiniz.Ayrıca aşşağıda bulunan sosyal medya hesaplarım üzerinden mesaj atabilirsiniz.</p>
+            </div>
+            <form action="Home/Iletisim" method="post" role="form" class="php-email-form">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 form-group">
+                        <input type="text" name="adsoyad" class="form-control" id="name" placeholder="İsminizi Yazınız" data-rule="minlen:4" required=>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Mail Adresinizi Yazınız" data-rule="email" data-msg="Please enter a valid email">
+                        <div class="validate"></div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                        <input type="tel" class="form-control" name="konu" id="subject" placeholder="Telefon Numaranızı Yazınız" data-rule="minlen:4" required>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                        <input type="text" class="form-control" name="mesaj" id="subject" placeholder="Mesajınız" data-rule="minlen:4" required>
+                        <div class="validate"></div>
+                    </div>
+                </div>
+
+                <div class="text-center"><button type="submit">Mesaj Gönder</button></div>
+            </form>
+
+        </div>
+    </section>
+
+</main><!-- End #main -->
