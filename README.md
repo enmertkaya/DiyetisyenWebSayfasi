@@ -1,6 +1,8 @@
 # DiyetisyenWebSayfasi
 Admin Panel tarafindan güncellenebilen dinamik web sitesi.(mobil uyumlu)
+<br>
 Site Adresi : 
+<br>
 ![ezgif com-gif-maker](https://github.com/enmertkaya/DiyetisyenWebSayfasi/assets/151652097/211776a6-2fbf-44ff-947f-0e07c9dad96e)
 
 Bu projede diyetisyen web sayfası , admin panel tarafından kontrol edilebilir şekilde tasarlanmıştır. SLider ekranı güncellenebilir , foto ,video eklenip ,silinebilir ve güncellenebilir.
@@ -12,8 +14,14 @@ Bu projede diyetisyen web sayfası , admin panel tarafından kontrol edilebilir 
   ![](image/admingiris.png)
 
   ***Admin Paneline Ait Sayfalar***
+  -->Slider ekranı
+  <br>
   ![](image/SliderEkrani.png)
+  -->Hizmetler Sayfası
+  <br>
   ![](image/Hizmetler.png)
+  -->Hakkımızda Sayfası
+  <br>
   ![](image/Hakkimizda.png)
 
     ## :computer: Projenin Kurulumu
