@@ -26,7 +26,7 @@ Bu projede diyetisyen web sayfası , admin panel tarafından kontrol edilebilir 
 
     ## :computer: Projenin Kurulumu
 
-   Proje’yi çalıştırmak için SQL Server Management Studio Management Studio 19’ın bilgisayarınızda yüklü olması gerekmektedir. Bu kurulumu tamamladıktan sonra veritabanlarımızın yerel sunucumuzda oluşmasını sağlamak için projemizi açıyoruz. Başlangıç projemizi **Kurumsal.Web** olarak belirledikten sonra package manager console’umuzda varsayılan projemizi **KurumsalWeb** olarak belirliyor ve **update-database** komutunu giriyoruz.Bu işlemden sonra veritabanımız yerel sunucumuz içerisinde oluşuyor.
+   Proje’yi çalıştırmak için SQL Server Management Studio Management Studio 19’ın bilgisayarınızda yüklü olması gerekmektedir. Bu kurulumu tamamladıktan sonra veritabanlarımızın yerel sunucumuzda oluşmasını sağlamak için projemizi açıyoruz. Başlangıç projemizi **Kurumsal.Web** olarak belirledikten sonra package manager console’umuzda varsayılan projemizi **KurumsalWeb** olarak belirliyor ve **update-database** komutunu giriyoruz.Bu işlemden sonra veritabanımız yerel sunucumuz içerisinde oluşuyor.Sorularınız icin iletisime gecebilirsiniz --> www.enesmertkaya.com
 
   <h2> 🛠 &nbsp;Kullanılan Teknolojiler</h2>
 
